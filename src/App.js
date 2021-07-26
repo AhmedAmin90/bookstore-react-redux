@@ -3,10 +3,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-        <h1>Initiate the project</h1>
+      <h1>Initiate the project</h1>
     </div>
   );
 }
 
 export default App;
-
