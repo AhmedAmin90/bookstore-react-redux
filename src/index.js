@@ -1,60 +1,58 @@
-/* eslint-disable */
+/* eslint-disable no-underscore-dangle */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux';
 import allReducers from './reducers';
-import { Provider } from 'react-redux';
-import * as actions from '../src/actions/index'
+import * as actions from './actions/index';
 
-export const initialState = {
+const initialState = {
   defaultBook: [
     {
       id: 1,
-      title: "Test One",
-      category: "Learning"
+      title: 'Test One',
+      category: 'Learning',
     },
     {
       id: 2,
-      title: "Test Two",
-      category: "Kids"
+      title: 'Test Two',
+      category: 'Kids',
     },
     {
       id: 3,
-      title: "Test Three",
-      category: "Horror"
+      title: 'Test Three',
+      category: 'Horror',
     },
     {
       id: 4,
-      title: "Test Four",
-      category: "History"
+      title: 'Test Four',
+      category: 'History',
     },
     {
       id: 5,
-      title: "Test Five",
-      category: "Action"
+      title: 'Test Five',
+      category: 'Action',
     },
     {
       id: 6,
-      title: "Test six",
-      category: "Sci-Fi"
-    }
-  ]
-}
+      title: 'Test six',
+      category: 'Sci-Fi',
+    },
+  ],
+};
 
-const store = createStore(allReducers ,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  );
+const store = createStore(allReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-
-initialState.defaultBook.map(book=> store.dispatch((actions.CREATE_BOOK(book))));
+initialState.defaultBook.map((book) => store.dispatch((actions.CREATE_BOOK(book))));
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <App />
+      <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
