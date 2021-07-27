@@ -1,10 +1,10 @@
 .BooksForm {
-    width: 100%;
+  width: 100%;
 }
 
 .BooksForm > form {
-    width: 50%;
-    margin: 10px auto;
-    display: flex;
-    justify-content: space-around;
+  width: 50%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-around;
 }
