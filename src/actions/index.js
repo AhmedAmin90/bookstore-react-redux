@@ -4,7 +4,7 @@ const CREATE_BOOK = (book) => ({
 });
 
 const REMOVE_BOOK = (book) => ({
-  type: 'DELETE_BOOK',
+  type: 'REMOVE_BOOK',
   payload: book,
 });
 
