@@ -1,12 +1,59 @@
+/* eslint-disable no-underscore-dangle */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import allReducers from './reducers';
+import * as actions from './actions/index';
+
+const initialState = {
+  defaultBook: [
+    {
+      id: 1,
+      title: 'Test One',
+      category: 'Learning',
+    },
+    {
+      id: 2,
+      title: 'Test Two',
+      category: 'Kids',
+    },
+    {
+      id: 3,
+      title: 'Test Three',
+      category: 'Horror',
+    },
+    {
+      id: 4,
+      title: 'Test Four',
+      category: 'History',
+    },
+    {
+      id: 5,
+      title: 'Test Five',
+      category: 'Action',
+    },
+    {
+      id: 6,
+      title: 'Test six',
+      category: 'Sci-Fi',
+    },
+  ],
+};
+
+const store = createStore(allReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+initialState.defaultBook.map((book) => store.dispatch((actions.CREATE_BOOK(book))));
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
