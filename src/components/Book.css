@@ -45,11 +45,10 @@ font-family: 'Roboto', sans-serif; */
   border: none;
   background-color: inherit;
   font-size: 12px;
-  display: flex;
   list-style: none;
   color: #4386bf;
   cursor: pointer;
-  margin: auto;
+  align-self: center;
 }
 
 .Book-category {

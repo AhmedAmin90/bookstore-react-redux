@@ -11,7 +11,7 @@ function BooksList() {
   const dispatch = useDispatch();
 
   const handleRemoveBook = (book) => {
-    dispatch(actions.REMOVE_BOOK({ book }));
+    dispatch(actions.REMOVE_BOOK(book));
   };
 
   const handleFilterChange = (category) => {
