@@ -6,7 +6,7 @@ import * as actions from '../actions/index';
 
 function BooksList() {
   const allBooks = useSelector((state) => state.allBooks);
-  const selectedCategory = useSelector((state) => state.filterdBooks );
+  const selectedCategory = useSelector((state) => state.filterdBooks);
 
   const dispatch = useDispatch();
 
@@ -27,16 +27,16 @@ function BooksList() {
           book={{ id: book.id, title: book.title, category: book.category }}
         />
       ));
-    } else {
-      let books = allBooks.filter((book) => book.category === category);
-      return books.map((book) => (
-        <Book
-          key={book.id}
-          handleClick={handleRemoveBook}
-          book={{ id: book.id, title: book.title, category: book.category }}
-        />))}
-      }
-
+    }
+    const books = allBooks.filter((book) => book.category === category);
+    return books.map((book) => (
+      <Book
+        key={book.id}
+        handleClick={handleRemoveBook}
+        book={{ id: book.id, title: book.title, category: book.category }}
+      />
+    ));
+  };
 
   return (
     <div>
