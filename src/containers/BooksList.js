@@ -42,10 +42,13 @@ function BooksList() {
   };
 
   return (
-    <div className="BookList">
-      <CategoryFilter handleFilter={handleFilterChange} />
-      {selectedBooks(selectedCategory)}
-    </div>)
+        <div className="BookList">
+          <CategoryFilter handleFilter={handleFilterChange} />
+          <div className="conatiner">
+          {selectedBooks(selectedCategory)}
+          </div>
+        </div>
+    )
    
 }
 

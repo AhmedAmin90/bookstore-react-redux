@@ -11,6 +11,10 @@ body {
   background-color: #FAFAFA;
 }
 
+.conatiner{
+  width: 90%;
+  margin: auto;
+}
 code {
   font-family:
     source-code-pro,
