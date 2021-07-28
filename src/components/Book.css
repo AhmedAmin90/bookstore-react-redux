@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.Book{
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    padding: 20px 50px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+
+}
+/* 
+font-family: 'Roboto', sans-serif; */
+
+.Book-card-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.Book-action-list{
+    font-size: 12px;
+    display: flex;
+    list-style: none;
+    color: #4386bf;
+}
+
+.Book-action-list > li {
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.Book-remove-li {
+    border-right: 1.25px solid #e8e8e8;
+    border-left: 1.25px solid #e8e8e8;
+    height: 20px;
+    padding: 0 10px;
+    margin: auto;
+
+}
+
+.Book-category {
+    color: #8A8A8A;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.Book-title {
+    color: #121212;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-top: 5px;
+}
+
+.Book-author {
+    color: #4386bf;
+    font-size: 12px;
+}
+
+
+/* Central Area */
+
+.Book-card-right {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Book-percentage {
+    display: flex;
+    justify-content: space-between;
+    width: 28%;
+}
+.Book-percentage-circle {
+    border-left: 5px solid #E8E8E8;
+    border-right: 5px solid #369BF4;
+    border-bottom: 5px solid #E8E8E8;
+    border-top: 5px solid #369BF4;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    transform: rotate(50deg);
+    align-self: center;
+
+}
+
+.Book-percentage-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Book-percentage-text > h3 {
+    color: #121212;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    align-items: center;
+    text-align: left;
+
+}
+
+.Book-percentage-text > p {
+    color: #8A8A8A;
+    font-size: 10px;
+    text-align: left;
+}
+
+
+.Book-card-line {
+    width: 2px;
+    height: 60px;
+    background-color: #e8e8e8;
+    margin: auto;
+}
+
+
+.Book-chapter-current {
+    color: #8A8A8A;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: left;
+    opacity: 0.5;
+}
+
+.Book-chapter-name {
+    color: #121212 ;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.Book-update-btn {
+    margin-top: 30px;
+    background-color: #0A8EFA;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    width: 185px;
+    height: 35px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+
+}

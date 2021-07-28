@@ -1,8 +1,11 @@
+/* eslint-disable */
+
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 import * as actions from '../actions/index';
+import './BookList.css';
 
 function BooksList() {
   const allBooks = useSelector((state) => state.allBooks);
@@ -39,22 +42,11 @@ function BooksList() {
   };
 
   return (
-    <div>
+    <div className="BookList">
       <CategoryFilter handleFilter={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {selectedBooks(selectedCategory)}
-        </tbody>
-      </table>
-    </div>
-  );
+      {selectedBooks(selectedCategory)}
+    </div>)
+   
 }
 
 export default BooksList;
