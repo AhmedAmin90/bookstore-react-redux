@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .BooksForm {
   width: 100%;
 }
@@ -17,10 +19,11 @@ form {
 }
 
 .BooksForm-title {
-  color: #888888;
+  color: #888;
   font-size: 20px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+  text-align: left;
 }
 
 .BooksForm-title-input {
@@ -28,6 +31,7 @@ form {
   height: 40px;
   border: 0.5px solid #e8e8e8;
   border-radius: 4px;
+  padding: 0 10px;
 }
 
 .BooksForm-title-div {
@@ -36,21 +40,10 @@ form {
   justify-content: space-between;
 }
 
-.BooksForm-title {
-  text-align: left;
-
-}
-
-.BooksForm-title-input {
-  border: 1px solid #e8e8e8;
-  padding: 0 10px;
-}
-
 .BooksForm-title-input::placeholder {
   font-size: 17px;
   opacity: 0.5;
 }
-
 
 .BooksForm-select {
   align-self: flex-end;

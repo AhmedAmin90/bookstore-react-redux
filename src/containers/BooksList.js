@@ -1,11 +1,8 @@
-/* eslint-disable */
-
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 import * as actions from '../actions/index';
-import './BookList.css';
 
 function BooksList() {
   const allBooks = useSelector((state) => state.allBooks);
@@ -14,7 +11,7 @@ function BooksList() {
   const dispatch = useDispatch();
 
   const handleRemoveBook = (book) => {
-    dispatch(actions.REMOVE_BOOK(book));
+    dispatch(actions.REMOVE_BOOK({ book }));
   };
 
   const handleFilterChange = (category) => {
@@ -27,7 +24,10 @@ function BooksList() {
         <Book
           key={book.id}
           handleClick={handleRemoveBook}
-          book={{ id: book.id, title: book.title, category: book.category }}
+          book={{
+            id: book.id, title: book.title, category: book.category, percent: book.percent,
+          }}
+          percent={book.percent}
         />
       ));
     }
@@ -37,19 +37,19 @@ function BooksList() {
         key={book.id}
         handleClick={handleRemoveBook}
         book={{ id: book.id, title: book.title, category: book.category }}
+        percent={book.percent}
       />
     ));
   };
 
   return (
-        <div className="BookList">
-          <CategoryFilter handleFilter={handleFilterChange} />
-          <div className="container">
-          {selectedBooks(selectedCategory)}
-          </div>
-        </div>
-    )
-   
+    <div className="BookList">
+      <CategoryFilter handleFilter={handleFilterChange} />
+      <div className="container">
+        {selectedBooks(selectedCategory)}
+      </div>
+    </div>
+  );
 }
 
 export default BooksList;
