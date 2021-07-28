@@ -44,7 +44,7 @@ function BooksList() {
   return (
         <div className="BookList">
           <CategoryFilter handleFilter={handleFilterChange} />
-          <div className="conatiner">
+          <div className="container">
           {selectedBooks(selectedCategory)}
           </div>
         </div>

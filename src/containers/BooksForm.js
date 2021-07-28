@@ -11,7 +11,7 @@ const BooksForm = () => {
   const [book, setBook] = useState({
     id: lastId + 1,
     title: '',
-    category: categories[0],
+    category: 'Category',
   });
 
   const dispatch = useDispatch();
@@ -24,36 +24,42 @@ const BooksForm = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    if (book.title.trim() === '') { alert('Please Add The Book Title !'); } else {
+    if (book.title.trim() === '') {
+      alert('Please Add The Book Title !');
+    } else if (book.category === 'Category') {
+      alert('Please Select Book Category');
+    } else {
       dispatch(actions.CREATE_BOOK(
         { id: book.id, title: book.title.trim(), category: book.category },
       ));
-      const nexId = book.id + 1;
-      setBook({
-        id: nexId,
-        title: '',
-        category: categories[0],
-      });
     }
+
+    const nexId = book.id + 1;
+    setBook({
+      id: nexId,
+      title: '',
+      category: categories[0],
+    });
   };
 
   return (
-    <div className="BooksForm">
-      <form onSubmit={handleClick}>
-        <label htmlFor="title-id">
-          Add The Book Title
-          <input type="text" id="title-id" value={book.title} placeholder="Book Title" name="title" onChange={handleChange} />
-        </label>
-        <label htmlFor="select-id">
-          Category
-          <select id="select-id" name="category" value={book.category} onChange={handleChange}>
-            <option defaultValue disabled>Select Category</option>
+    <div className="container">
+      <div className="BooksForm">
+        <hr />
+        <form onSubmit={handleClick}>
+          <div className="BooksForm-title-div">
+            <p className="BooksForm-title"> ADD NEW BOOK </p>
+            <input className="BooksForm-title-input" type="text" id="title-id" value={book.title} placeholder="Book Title" name="title" onChange={handleChange} />
+          </div>
+
+          <select className="BooksForm-select" id="select-id" name="category" value={book.category} onChange={handleChange}>
+            <option defaultValue disabled> Category</option>
             {categories.map((cat) => <option key={cat} value={cat}>{cat}</option>)}
           </select>
-        </label>
 
-        <input type="submit" value="Add New Book" />
-      </form>
+          <input className="BooksForm-btn" type="submit" value="Add New Book" />
+        </form>
+      </div>
     </div>
   );
 };

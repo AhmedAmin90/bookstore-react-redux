@@ -2,9 +2,81 @@
   width: 100%;
 }
 
-.BooksForm > form {
-  width: 50%;
-  margin: 10px auto;
+hr {
+  border-top: 1px solid #e8e8e8;
+  width: 96.5%;
+  margin: auto;
+}
+
+form {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 20px;
+  height: 120px;
+}
+
+.BooksForm-title {
+  color: #888888;
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: bold;
+}
+
+.BooksForm-title-input {
+  width: 625px;
+  height: 40px;
+  border: 0.5px solid #e8e8e8;
+  border-radius: 4px;
+}
+
+.BooksForm-title-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.BooksForm-title {
+  text-align: left;
+
+}
+
+.BooksForm-title-input {
+  border: 1px solid #e8e8e8;
+  padding: 0 10px;
+}
+
+.BooksForm-title-input::placeholder {
+  font-size: 17px;
+  opacity: 0.5;
+}
+
+
+.BooksForm-select {
+  align-self: flex-end;
+  width: 280px;
+  height: 40px;
+  border: 0.5px solid #e8e8e8;
+  background-color: white;
+  color: #c4c4c4;
+  font-size: 20px;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.BooksForm-select > option {
+  color: #4386bf;
+}
+
+.BooksForm-btn {
+  width: 180px;
+  height: 40px;
+  background-color: #4386bf;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  align-self: flex-end;
 }
