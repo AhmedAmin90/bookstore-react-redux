@@ -1,8 +1,8 @@
 # Bookstore App
 
+This is a bookstore application built by React and Redux.
 
-## First Milestone:
-This is the first milestone in the bookstore app. I added the required packages and linters and deployed it to Heroku.
+![screenshot](src/assets/img.png) 
 
 
 # Live Link:

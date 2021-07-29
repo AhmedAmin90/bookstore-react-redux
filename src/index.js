@@ -15,31 +15,37 @@ const initialState = {
       id: 1,
       title: 'Test One',
       category: 'Learning',
+      percent: 50,
     },
     {
       id: 2,
       title: 'Test Two',
       category: 'Kids',
+      percent: 43,
     },
     {
       id: 3,
       title: 'Test Three',
       category: 'Horror',
+      percent: 45,
     },
     {
       id: 4,
       title: 'Test Four',
       category: 'History',
+      percent: 60,
     },
     {
       id: 5,
       title: 'Test Five',
       category: 'Action',
+      percent: 50,
     },
     {
       id: 6,
       title: 'Test six',
       category: 'Sci-Fi',
+      percent: 50,
     },
   ],
 };

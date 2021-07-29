@@ -24,7 +24,10 @@ function BooksList() {
         <Book
           key={book.id}
           handleClick={handleRemoveBook}
-          book={{ id: book.id, title: book.title, category: book.category }}
+          book={{
+            id: book.id, title: book.title, category: book.category, percent: book.percent,
+          }}
+          percent={book.percent}
         />
       ));
     }
@@ -34,25 +37,17 @@ function BooksList() {
         key={book.id}
         handleClick={handleRemoveBook}
         book={{ id: book.id, title: book.title, category: book.category }}
+        percent={book.percent}
       />
     ));
   };
 
   return (
-    <div>
+    <div className="BookList">
       <CategoryFilter handleFilter={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {selectedBooks(selectedCategory)}
-        </tbody>
-      </table>
+      <div className="container">
+        {selectedBooks(selectedCategory)}
+      </div>
     </div>
   );
 }

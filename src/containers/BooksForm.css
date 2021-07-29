@@ -1,10 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .BooksForm {
   width: 100%;
 }
 
-.BooksForm > form {
-  width: 50%;
-  margin: 10px auto;
+hr {
+  border-top: 1px solid #e8e8e8;
+  width: 96.5%;
+  margin: auto;
+}
+
+form {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 20px;
+  height: 120px;
+}
+
+.BooksForm-title {
+  color: #888;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: left;
+}
+
+.BooksForm-title-input {
+  width: 625px;
+  height: 40px;
+  border: 0.5px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+
+.BooksForm-title-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.BooksForm-title-input::placeholder {
+  font-size: 17px;
+  opacity: 0.5;
+}
+
+.BooksForm-select {
+  align-self: flex-end;
+  width: 280px;
+  height: 40px;
+  border: 0.5px solid #e8e8e8;
+  background-color: white;
+  color: #c4c4c4;
+  font-size: 20px;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.BooksForm-select > option {
+  color: #4386bf;
+}
+
+.BooksForm-btn {
+  width: 180px;
+  height: 40px;
+  background-color: #4386bf;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  align-self: flex-end;
 }
